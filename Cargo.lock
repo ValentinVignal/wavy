@@ -3,5 +3,38 @@
 version = 3
 
 [[package]]
+name = "bitflags"
+version = "2.6.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b048fb63fd8b5923fc5aa7b340d8e156aec7ec02f0c78fa8a6ddc2613f6f71de"
+
+[[package]]
+name = "clack-common"
+version = "0.1.0"
+source = "git+https://github.com/prokopyl/clack.git#5deaa1be9b5af7078d75cbe54abefee12ed40f63"
+dependencies = [
+ "bitflags",
+ "clap-sys",
+]
+
+[[package]]
+name = "clack-plugin"
+version = "0.1.0"
+source = "git+https://github.com/prokopyl/clack.git#5deaa1be9b5af7078d75cbe54abefee12ed40f63"
+dependencies = [
+ "clack-common",
+ "clap-sys",
+]
+
+[[package]]
+name = "clap-sys"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "61b04354981cd059bf376007c9361ded38b15de87972e634670799685b042197"
+
+[[package]]
 name = "wavy"
 version = "0.1.0"
+dependencies = [
+ "clack-plugin",
+]

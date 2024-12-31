@@ -2,5 +2,10 @@
 name = "wavy"
 version = "0.1.0"
 edition = "2021"
+description = "A simple synthetizer plugin"
+
+[lib]
+crate-type = ["cdylib"]
 
 [dependencies]
+clack-plugin = { git = "https://github.com/prokopyl/clack.git", version = "0.1.0" }
