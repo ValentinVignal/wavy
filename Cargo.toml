@@ -1,6 +1,6 @@
 [package]
 name = "wavy"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "A simple synthetizer plugin"
 
@@ -8,4 +8,9 @@ description = "A simple synthetizer plugin"
 crate-type = ["cdylib"]
 
 [dependencies]
+clack-extensions = { git = "https://github.com/prokopyl/clack.git", version = "0.1.0", features = [
+    "clack-plugin",
+    "audio-ports",
+    "note-ports",
+] }
 clack-plugin = { git = "https://github.com/prokopyl/clack.git", version = "0.1.0" }
